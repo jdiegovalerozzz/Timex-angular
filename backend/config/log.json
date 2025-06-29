@@ -1,0 +1,8 @@
+{
+    "eco-info" : true,
+    "eco-error" : true,
+    "eco-warning" : true,
+    "eco-debug" : true,
+    "save" : false,
+    "fileSize" : 10000
+}

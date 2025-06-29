@@ -1,0 +1,19 @@
+ 
+{
+    
+
+    "security":{
+        "getUser" : "select u.user_id, u.user_na, p.profile_id from security.user u inner join security.user_profile up on up.user_id = u.user_id inner join security.profile p on up.profile_id = p.profile_id where u.user_na = $1 and u.user_pw = $2",
+        "loadPermission" : "SELECT pr.profile_id, ob.object_de, me.method_de FROM security.permission_method pm INNER JOIN security.profile pr on pm.profile_id = pr.profile_id INNER JOIN security.method me ON pm.method_id = me.method_id INNER JOIN security.object ob ON me.object_id = ob.object_id ORDER BY pm.permission_method_id",
+        "loadMenu" : "SELECT pr.profile_id, me.menu_de, me.menu_function_de FROM security.permission_menu pm INNER JOIN security.profile pr ON pm.profile_id = pr.profile_id INNER JOIN security.menu me ON pm.menu_id = me.menu_id",
+        "userExists" : "SELECT user_id FROM security.user WHERE user_na = $1 OR user_email = $2",
+        "createUser" : "INSERT INTO security.user (user_na, user_pw, user_email) VALUES ($1, $2, $3) RETURNING user_id",
+        "getProfile" : "SELECT profile_id FROM security.profile WHERE profile_de = $1" ,
+        "assignUserProfile" : "INSERT INTO security.user_profile (user_id, profile_id) VALUES ($1, $2)"
+    
+
+    }
+
+    
+        
+}
