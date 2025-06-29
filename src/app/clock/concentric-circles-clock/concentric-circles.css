@@ -1,0 +1,114 @@
+.concentric-clock {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding: 1.5rem;
+    }
+    
+    .circles-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    
+    .hours-circle {
+      width: 100%;
+      height: 100%;
+      border: 8px solid #e0e0e0;
+    }
+    
+    .minutes-circle {
+      width: 200px;
+      height: 200px;
+      border: 6px solid #e0e0e0;
+    }
+    
+    .seconds-circle {
+      width: 100px;
+      height: 100px;
+      border: 4px solid #e0e0e0;
+    }
+    
+    .progress-fill {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      transform-origin: center center;
+    }
+    
+    .hours-circle .progress-fill {
+      background: conic-gradient(#4361ee 0deg, #4361ee var(--hour-rotation), transparent var(--hour-rotation), transparent 360deg);
+      --hour-rotation: ${this.hourRotation}deg;
+    }
+    
+    .minutes-circle .progress-fill {
+      background: conic-gradient(#f72585 0deg, #f72585 var(--minute-rotation), transparent var(--minute-rotation), transparent 360deg);
+      --minute-rotation: ${this.minuteRotation}deg;
+    }
+    
+    .seconds-circle .progress-fill {
+      background: conic-gradient(#4cc9f0 0deg, #4cc9f0 var(--second-rotation), transparent var(--second-rotation), transparent 360deg);
+      --second-rotation: ${this.secondRotation}deg;
+    }
+    
+    .center-dot {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: #333;
+      border-radius: 50%;
+      z-index: 10;
+    }
+    
+    .time-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .time-display {
+      font-family: 'Courier New', monospace;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #4361ee;
+    }
+    
+    .progress-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .progress-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+    
+    .color-dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    
+    .hours-dot { background: #4361ee; }
+    .minutes-dot { background: #f72585; }
+    .seconds-dot { background: #4cc9f0; }

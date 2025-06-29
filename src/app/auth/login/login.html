@@ -1,0 +1,6 @@
+<form (submit)="onSubmit()">
+      <input [(ngModel)]="credentials.user" name="user" placeholder="Usuario">
+      <input [(ngModel)]="credentials.password" type="password" placeholder="Contraseña">
+      <button type="submit">Login</button>
+      <p *ngIf="error">{{ error }}</p>
+    </form>

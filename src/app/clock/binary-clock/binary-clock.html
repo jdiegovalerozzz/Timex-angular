@@ -1,0 +1,34 @@
+<div class="binary-clock">
+      <div class="time-unit">
+        <span>Horas:</span>
+        <div class="binary-row">
+          <span *ngFor="let bit of binaryHours" 
+                [class.active]="bit === '1'" 
+                class="binary-cell">
+            {{ bit }}
+          </span>
+        </div>
+      </div>
+      
+      <div class="time-unit">
+        <span>Minutos:</span>
+        <div class="binary-row">
+          <span *ngFor="let bit of binaryMinutes" 
+                [class.active]="bit === '1'" 
+                class="binary-cell">
+            {{ bit }}
+          </span>
+        </div>
+      </div>
+      
+      <div class="time-unit">
+        <span>Segundos:</span>
+        <div class="binary-row">
+          <span *ngFor="let bit of binarySeconds" 
+                [class.active]="bit === '1'" 
+                class="binary-cell">
+            {{ bit }}
+          </span>
+        </div>
+      </div>
+    </div>

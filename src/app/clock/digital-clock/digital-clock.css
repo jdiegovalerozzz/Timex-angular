@@ -1,0 +1,18 @@
+.digital-clock {
+      font-family: 'Segment7Standard', monospace;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      background: #0e5bd7;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    .time-display {
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+    .date-display {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }

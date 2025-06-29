@@ -1,0 +1,25 @@
+.binary-clock {
+      font-family: 'Courier New', monospace;
+      text-align: center;
+    }
+    .time-unit {
+      margin: 10px 0;
+    }
+    .binary-row {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+    .binary-cell {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f0f0f0;
+      border-radius: 3px;
+    }
+    .binary-cell.active {
+      background: #3f51b5;
+      color: white;
+    }

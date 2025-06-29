@@ -1,0 +1,13 @@
+<div class="analog-clock">
+      <div class="clock-face">
+        <div *ngFor="let mark of hourMarks" 
+             class="hour-mark" 
+             [style.transform]="'rotate(' + mark + 'deg)'"></div>
+        
+        <div class="hand hour-hand" [style.transform]="'rotate(' + hourAngle + 'deg)'"></div>
+        <div class="hand minute-hand" [style.transform]="'rotate(' + minuteAngle + 'deg)'"></div>
+        <div class="hand second-hand" [style.transform]="'rotate(' + secondAngle + 'deg)'"></div>
+        
+        <div class="center-circle"></div>
+      </div>
+    </div>
